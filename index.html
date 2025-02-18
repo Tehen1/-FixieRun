@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixie NFT Run Clone</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="distance-traveled">267 km</div>
+        <div class="gem-balance">103.61 💎</div>
+    </div>
+    <div class="shoe-info">
+        <div class="shoe-image">
+            👟
+        </div>
+        <div class="shoe-stats">
+            <div class="shoe-level">Level 23</div>
+            <div class="shoe-id">ID: #12345</div>
+            <div class="shoe-attributes">
+                <div class="attribute">Efficiency: 8.2</div>
+                <div class="attribute">Luck: 6.5</div>
+                <div class="attribute">Comfort: 7.1</div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <div class="stats-container">
+        <div class="timer">
+            <span id="timer">00:00:00</span>
+        </div>
+        <div class="nft-info">
+            Run to earn NFT rewards! 🏃‍♂️✨
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-label">Distance</div>
+                <div class="stat-value" id="distance">0.0 km</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Speed</div>
+                <div class="stat-value" id="speed">0.0 km/h</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">NFT Points</div>
+                <div class="stat-value" id="nft-points">0</div>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="button" id="start-btn" aria-label="Start Run">START RUN</button>
+            <button class="button" id="stop-btn" disabled aria-label="Finish Run">FINISH</button>
+        </div>
+        <div class="nft-status">Next NFT reward at: <span id="next-reward">5.0 km</span></div>
+        <div class="nft-reward" id="reward-message"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
+
